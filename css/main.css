@@ -1,0 +1,347 @@
+@import "/css/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@200;300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --container-width: 1600px;
+    --container-padding: 15px;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    background-color: #212121;
+}
+
+.none {
+    display: none !important;
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+.block {
+    height: 100px;
+    background-color: burlywood;
+}
+/*Header*/
+.header {
+    position: relative;
+    min-height: 90vh;
+    padding-top: 10px;
+}
+
+.header-top {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/*Nav*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+}
+.navbar-left {
+    display: flex;  
+    align-items: center;
+    column-gap: 20px;
+  }
+
+/* Social icons */
+
+.socials-container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #212121;
+  }
+  .social {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgb(194, 194, 194);
+  }
+  .facebook:hover {
+    background: linear-gradient(45deg, #134ac0, #316ff6, #78a3ff);
+  }
+  .instagram:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+  .social svg {
+    fill: white;
+    height: 20px;
+  }
+  
+  /* info */
+  .icon {
+    width: 18px; /* Ширина иконки */
+    height: 18px; /* Высота иконки */
+    margin-right: 5px; /* Отступ от текста */
+    vertical-align: middle; /* Выравнивание по центру текста */
+  }
+  
+/* links */
+
+.navbar-list {
+    display: flex;
+    align-items: center; /* Выравниваем элементы по вертикали */
+    gap: 20px;
+    position: relative;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    position: relative; /* Нужно для псевдоэлемента */
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+  }
+  
+  .nav-links li a::after {
+    content: ''; /* Создаём линию */
+    position: absolute;
+    bottom: 0; /* Располагаем линию снизу текста */
+    left: 50%; /* Начинаем с центра */
+    width: 0; /* Изначально линия имеет нулевую ширину */
+    height: 1px; /* Толщина линии */
+    background-color: #ffffff; /* Цвет линии */
+    transition: all 0.3s ease; /* Плавная анимация */
+    transform: translateX(-50%); /* Центрируем линию по горизонтали */
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%; /* Линия растягивается до всей ширины текста */
+  }
+
+  /* Кнопка записаться */
+  .Btn {
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd277;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+    order: 0;
+  }
+  
+  .Btn::before {
+    position: absolute;
+    content: "OBJEDNAT'";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+    font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal;
+  }
+  
+  .Btn:hover {
+    background-position: right;
+    transition-duration: 1s;
+  } 
+  .Btn:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  .Btn:active {
+    transform: scale(0.95);
+  }
+
+/* Header content */
+  .main-content {
+    display: flex;
+    min-height: 65vh;
+    align-items: center;
+  }
+
+  .content-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-placeholder {
+    width: 80%;
+  }
+
+  .logo-placeholder img{
+    width: 100%;
+  }
+  
+  .description {
+    font-size: 2.5vw;
+    color: #ffd277;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Cormorant Garamond', sans-serif;
+  }
+
+  .content-right {
+    width: 50%;
+    display: flex;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team-photo {
+    width: 100%;
+    border-radius: 30%;
+    box-shadow: 0 0 3px 3px #ffdf7f80; /* Свечение */
+  }
+
+  /* bottom section */
+
+  .bottom-section {
+    text-align: center;
+    padding: 0px 100px;
+    background-color: #f5e3ce;
+    border-radius: 50px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    flex-wrap: wrap;
+  }
+
+  .button-group img {
+    width: 50px;
+  }
+
+.button {
+    --primary-color: #f5e3ce;
+    --secondary-color: #000000;
+    --hover-color: #f5e3ce;
+    --arrow-width: 10px;
+    --arrow-stroke: 1px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 50px;
+    color: var(--secondary-color);
+    padding: 0.5em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    transition: transform 0.3s ease;
+  }
+  
+  .button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  .button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  .button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+     transform: scale(1.1);
+  }
+  
+ .button:active {
+  transform: translateY(2px);
+  }
+  
+  .button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  .button:hover .arrow:before {
+    right: 0;
+  }
+  
+  
